@@ -125,4 +125,4 @@ If we generate `1.jpg` and `1.webp` files by default the browser will request th
 [MIT](http://opensource.org/licenses/MIT)
 
 [npm]: https://img.shields.io/npm/v/image-webp-loader.svg
-[npm-url]: https://npmjs.com/package/file-loader
+[npm-url]: https://npmjs.com/package/image-webp-loader
