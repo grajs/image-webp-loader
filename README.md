@@ -20,7 +20,7 @@ rules: [
     test: /\.(png|jpe?g)$/i,
     use: [
       {
-        loader: resolve(__dirname, '../'),
+        loader: ‘image-webp-loader’,
         options: {
           publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
@@ -40,7 +40,7 @@ rules: [
     test: /\.(png|jpe?g)$/i,
     use: [
       {
-        loader: resolve(__dirname, '../'),
+        loader: 'image-webp-loader',
         options: {
           publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
@@ -60,7 +60,7 @@ rules: [
     test: /\.(png|jpe?g)$/i,
     use: [
       {
-        loader: resolve(__dirname, '../'),
+        loader: 'image-webp-loader',
         options: {
           publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
@@ -88,7 +88,7 @@ rules: [
     test: /\.(png|jpe?g)$/i,
     use: [
       {
-        loader: resolve(__dirname, '../'),
+        loader: 'image-webp-loader',
         options: {
           publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
