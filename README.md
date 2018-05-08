@@ -20,7 +20,7 @@ rules: [
     test: /\.(png|jpe?g)$/i,
     use: [
       {
-        loader: ‘image-webp-loader’,
+        loader: 'image-webp-loader',
         options: {
           publicPath: '/',
           outputPath: resolve(__dirname, './dist'),

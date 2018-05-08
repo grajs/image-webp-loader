@@ -1,6 +1,6 @@
 {
   "name": "image-webp-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "With webpack-loader to convert ordinary picture format to webp pictures, you can produce original pictures and webp pictures together and keep the same hash",
   "main": "index.js",
   "scripts": {
