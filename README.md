@@ -29,7 +29,6 @@ rules: [
       {
         loader: 'image-webp-loader',
         options: {
-          publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
           name: 'images/[name].[hash].[ext]'
         }
@@ -49,7 +48,6 @@ rules: [
       {
         loader: 'image-webp-loader',
         options: {
-          publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
           name: 'images/[name].[hash].[ext]',
           quality: 85
@@ -69,7 +67,6 @@ rules: [
       {
         loader: 'image-webp-loader',
         options: {
-          publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
           name: 'images/[name].[hash].[ext]',
           quality: 100,
@@ -97,7 +94,6 @@ rules: [
       {
         loader: 'image-webp-loader',
         options: {
-          publicPath: '/',
           outputPath: resolve(__dirname, './dist'),
           name: 'images/[name].[hash].[ext]',
           requestType: 'image'
@@ -114,7 +110,7 @@ If we generate `1.jpg` and `1.webp` files by default the browser will request th
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
 |**`name`**|`String`|`[name].[hash].[ext]`|Configure a custom filename template for your file|
-|**`publicPath`**|`String`|`'/'`|Configure a custom `public` path for your file|
+|**`publicPath`**|`String`|`''`|Configure a custom `public` path for your file, but you should note that there is an interaction with `module.exports.output.publicPath`|
 |**`outputPath`**|`String`|`resolve(__dirname, '../../dist')`|Configure a custom `output` path for your file (`distPath`)|
 |**`quality`**|`Int`|`100`|Set webp picture compression quality, (`0~100`)|
 |**`subQuality`**|`JSON-Object`|`{}`|Set the compression quality of special pictures|

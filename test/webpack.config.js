@@ -16,7 +16,6 @@ module.exports = {
           {
             loader: resolve(__dirname, '../'),
             options: {
-              publicPath: '/',
               outputPath: resolve(__dirname, './dist'),
               name: 'images/[name].[hash].[ext]',
               quality: 100,

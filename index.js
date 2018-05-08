@@ -14,7 +14,7 @@ exports.default = function (content) {
   const self = this
   const options = loaderUtils.getOptions(this) || {}
   options.name = options.name ? options.name : '[name].[hash].[ext]'
-  options.publicPath = options.publicPath ? options.publicPath : '/'
+  options.publicPath = options.publicPath ? options.publicPath : ''
   options.outputPath = options.outputPath ? options.outputPath : resolve(__dirname, '../../dist')
   options.quality = options.quality ? options.quality : 100
   options.requestType = options.requestType ? options.requestType : false
@@ -49,7 +49,7 @@ exports.default = function (content) {
     }
   })
   let publicPath = url
-  if (options.publicPath) {
+  if (options.publicPath && options.publicPath.trim() !== '') {
     if (/\/$/.test(options.publicPath)) {
       publicPath = options.publicPath + publicPath
     } else {
