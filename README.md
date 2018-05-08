@@ -10,6 +10,13 @@ Your can with webpack-loader to convert ordinary picture format to webp pictures
 npm install image-webp-laoder --save-dev
 ```
 
+## Dependence
+Conversion depends on [imagemin](https://www.npmjs.com/package/imagemin) and [imagemin-webp](https://www.npmjs.com/package/imagemin-webp), you need to install them
+```sh
+npm install imagemin --save-dev
+npm install imagemin-webp --save-dev
+```
+
 ## Usage
 
 Here is the example of using `image-webp-laoder`, after packaging will produce the original picture and webp picture to the specified path:
