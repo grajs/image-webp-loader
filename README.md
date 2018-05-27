@@ -98,6 +98,27 @@ rules: [
 ```
 If we generate `1.jpg` and `1.webp` files by default the browser will request the picture via `1.jpg`, if we change the requestType attribute to `'image'` then the request becomes `1.image` if not considered compatible You can set the `requestType: 'webp'`, then all picture requests become webp requests.
 
+<h2 align="center">Tip</h2>
+
+If you only need to generate webp images,you should set the copy `attribute` to `false`
+```javascript
+rules: [
+  {
+    test: /\.(png|jpe?g)$/i,
+    use: [
+      {
+        loader: 'image-webp-loader',
+        options: {
+          outputPath: resolve(__dirname, './dist'),
+          name: 'images/[name].[hash].[ext]',
+          copy: false
+        }
+      }
+    ]
+  }
+]
+```
+
 <h2 align="center">Options</h2>
 
 |Name|Type|Default|Description|
@@ -107,6 +128,7 @@ If we generate `1.jpg` and `1.webp` files by default the browser will request th
 |**`outputPath`**|`String`|`resolve(__dirname, '../../dist')`|Configure a custom `output` path for your file (`distPath`)|
 |**`quality`**|`Int`|`100`|Set webp picture compression quality, (`0~100`)|
 |**`subQuality`**|`JSON-Object`|`{}`|Set the compression quality of special pictures|
+|**`copy`**|`Boolean`|`false`|Select whether to keep the source file|
 |**`requestType`**|`String`|`false`|Set picture request suffix|
 
 ## Inspiration

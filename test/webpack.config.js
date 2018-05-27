@@ -22,7 +22,7 @@ module.exports = {
               subQuality: {
                 'index-back.jpg': 83
               },
-              copy: false,
+              // copy: false,
               requestType: 'image'
             }
           }
