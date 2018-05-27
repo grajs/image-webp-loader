@@ -1,6 +1,6 @@
 {
   "name": "image-webp-loader",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "With webpack-loader to convert ordinary picture format to webp pictures, you can produce original pictures and webp pictures together and keep the same hash",
   "main": "index.js",
   "scripts": {
@@ -22,13 +22,12 @@
   },
   "homepage": "https://github.com/grajs/image-webp-loader#readme",
   "devDependencies": {
-    "imagemin": "^5.3.1",
-    "imagemin-webp": "^4.1.0",
     "webpack": "^4.7.0",
     "webpack-cli": "^2.1.3"
   },
-  "peerDependencies": {
+  "dependencies": {
     "imagemin": "^5.3.1",
-    "imagemin-webp": "^4.1.0"
+    "imagemin-webp": "^4.1.0",
+    "loader-utils": "^1.1.0"
   }
 }
