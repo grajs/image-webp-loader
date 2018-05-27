@@ -11,16 +11,18 @@ const imagemin = require('imagemin')
 const imageminWebp = require('imagemin-webp')
 
 exports.default = function (content) {
-  const self = this
   const options = loaderUtils.getOptions(this) || {}
   options.name = options.name ? options.name : '[name].[hash].[ext]'
   options.publicPath = options.publicPath ? options.publicPath : ''
   options.outputPath = options.outputPath ? options.outputPath : resolve(__dirname, '../../dist')
   options.quality = options.quality ? options.quality : 100
-  options.requestType = options.requestType ? options.requestType : false
+  if (options.copy !== false) {
+    options.copy = true
+  }
+  options.requestType = options.copy ? options.requestType ? options.requestType : 'webp' : 'webp'
   const url = _loaderUtils.default.interpolateName(this, options.name, {content, regExp: options.regExp})
   const fileName = this.resourcePath.replace(/.*[/\\]/, '')
-  this.emitFile(url, content)
+  options.copy && this.emitFile(url, content)
   const matchSubQuality = () => {
     let back = false
     if (typeof options.subQuality === 'object') {
@@ -56,8 +58,6 @@ exports.default = function (content) {
       publicPath = options.publicPath + '/' + publicPath
     }
   }
-  if (options.requestType) {
-    publicPath = publicPath.replace(/\.(webp|png|jpe?g)/i, '.' + options.requestType)
-  }
+  publicPath = publicPath.replace(/\.(webp|png|jpe?g)/i, '.' + options.requestType)
   return `module.exports = __webpack_public_path__ + ${JSON.stringify(publicPath)};`
 }
