@@ -49,6 +49,8 @@ exports.default = function (content) {
       console.log('\n')
       console.log('\x1B[46m%s\x1b[49m', fileName + " to webp fail,try to adjust the quality attribute or add subQuality attribute")
     }
+  }).catch(err=>{
+    throw err
   })
   let publicPath = url
   if (options.publicPath && options.publicPath.trim() !== '') {
