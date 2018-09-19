@@ -16,14 +16,9 @@ module.exports = {
           {
             loader: resolve(__dirname, '../'),
             options: {
+              publicPath: '/',
               outputPath: resolve(__dirname, './dist'),
-              name: 'images/[name].[hash].[ext]',
-              quality: 100,
-              subQuality: {
-                'index-back.jpg': 83
-              },
-              // copy: false,
-              requestType: 'image'
+              name: 'images/[name].[hash].[ext]'
             }
           }
         ]
