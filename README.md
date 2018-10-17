@@ -7,12 +7,12 @@ Your can with webpack-loader to convert ordinary picture format to webp pictures
 ## Install
 
 ```sh
-npm install image-webp-laoder --save-dev
+npm install image-webp-loader --save-dev
 ```
 
 ## Usage
 
-Here is the example of using `image-webp-laoder`, after packaging will produce the original picture and webp picture to the specified path:
+Here is the example of using `image-webp-loader`, after packaging will produce the original picture and webp picture to the specified path:
 
 ```javascript
 rules: [
