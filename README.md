@@ -1,6 +1,6 @@
 [![npm][npm]][npm-url]
 
-# image-webp-laoder
+# image-webp-loader
 
 Your can with webpack-loader to convert ordinary picture format to webp pictures, you can produce **original pictures and webp pictures** together and keep the **same hash**
 
